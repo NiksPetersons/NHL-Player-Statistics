@@ -1,0 +1,92 @@
+<%= form_with(model: player) do |form| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+        <% player.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.text_field :position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :games_played %>
+    <%= form.number_field :games_played %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goals %>
+    <%= form.number_field :goals %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assists %>
+    <%= form.number_field :assists %>
+  </div>
+
+  <div class="field">
+    <%= form.label :points %>
+    <%= form.number_field :points %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plus_minus %>
+    <%= form.number_field :plus_minus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :draft_team %>
+    <%= form.text_field :draft_team %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nationality %>
+    <%= form.text_field :nationality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :draft_year %>
+    <%= form.number_field :draft_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :draft_pick %>
+    <%= form.number_field :draft_pick %>
+  </div>
+
+  <div class="field">
+    <%= form.label :retirement_year %>
+    <%= form.number_field :retirement_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :penalty_minutes %>
+    <%= form.number_field :penalty_minutes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :point_share %>
+    <%= form.number_field :point_share %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amateur_team %>
+    <%= form.text_field :amateur_team %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
