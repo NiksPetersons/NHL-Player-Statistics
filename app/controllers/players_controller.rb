@@ -11,6 +11,10 @@ class PlayersController < ApplicationController
     @players = Player.order(:name).page(params[:page]).per(50)
   end
 
+  def search
+      @players = Player.where("name LIKE ?", "%"+params[:q]+"%")
+  end
+
   # GET /players/1 or /players/1.json
   def show
   end

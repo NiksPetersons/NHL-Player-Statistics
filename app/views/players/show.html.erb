@@ -1,16 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-6 ">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2><%= @player.name %></h2>
+          <p>
+            <strong>Position:</strong>
+            <%= @player.position %>
+          </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @player.name %>
-</p>
-
-<p>
-  <strong>Position:</strong>
-  <%= @player.position %>
-</p>
-
-<p>
+          <p>
   <strong>Games played:</strong>
   <%= @player.games_played %>
 </p>
@@ -74,6 +70,7 @@
   <strong>Amateur team:</strong>
   <%= @player.amateur_team %>
 </p>
-
-<%= link_to 'Edit', edit_player_path(@player) %> |
-<%= link_to 'Back', players_path %>
+          <%= link_to 'Edit', edit_player_path(@player), class:"btn btn-outline-warning" %>
+          <%= link_to 'Back', players_path, class:"btn btn-outline-danger" %>
+        </div>
+      </div>
