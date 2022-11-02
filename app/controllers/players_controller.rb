@@ -12,7 +12,8 @@ class PlayersController < ApplicationController
   end
 
   def search
-      @players = Player.where("name LIKE ?", "%"+params[:q]+"%")
+      @players = Player.where("lower(name) LIKE :q OR lower(position) LIKE :q OR lower(draft_team) LIKE :q OR lower(nationality) LIKE :q",
+       q: "%#{params[:q].downcase}%").order(:name).page(params[:page]).per(50)
   end
 
   # GET /players/1 or /players/1.json
