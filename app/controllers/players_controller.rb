@@ -7,7 +7,8 @@ class PlayersController < ApplicationController
   end
   # GET /players or /players.json
   def index
-    @players = Player.all
+    #@players = Player.all
+    @players = Player.order(:name).page(params[:page]).per(50)
   end
 
   # GET /players/1 or /players/1.json

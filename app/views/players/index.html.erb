@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Players</h1>
+<%= Player.count %>
+<%= paginate @players %>
+
 <table class="table table-striped table-hover table-bordered table-sm">
   <thead class="thead-dark">
     <tr>
@@ -49,6 +52,7 @@
   </tbody>
 </table>
 
+<%= paginate @players %>
 
 <br>
 
