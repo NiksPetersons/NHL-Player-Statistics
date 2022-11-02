@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @player.name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @player.position %>
+</p>
+
+<p>
+  <strong>Games played:</strong>
+  <%= @player.games_played %>
+</p>
+
+<p>
+  <strong>Goals:</strong>
+  <%= @player.goals %>
+</p>
+
+<p>
+  <strong>Assists:</strong>
+  <%= @player.assists %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @player.points %>
+</p>
+
+<p>
+  <strong>Plus minus:</strong>
+  <%= @player.plus_minus %>
+</p>
+
+<p>
+  <strong>Draft team:</strong>
+  <%= @player.draft_team %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @player.nationality %>
+</p>
+
+<p>
+  <strong>Draft year:</strong>
+  <%= @player.draft_year %>
+</p>
+
+<p>
+  <strong>Draft pick:</strong>
+  <%= @player.draft_pick %>
+</p>
+
+<p>
+  <strong>Retirement year:</strong>
+  <%= @player.retirement_year %>
+</p>
+
+<p>
+  <strong>Penalty minutes:</strong>
+  <%= @player.penalty_minutes %>
+</p>
+
+<p>
+  <strong>Point share:</strong>
+  <%= @player.point_share %>
+</p>
+
+<p>
+  <strong>Amateur team:</strong>
+  <%= @player.amateur_team %>
+</p>
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>
