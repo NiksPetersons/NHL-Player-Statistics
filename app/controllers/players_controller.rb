@@ -8,7 +8,7 @@ class PlayersController < ApplicationController
   # GET /players or /players.json
   def index
     #@players = Player.all
-    @players = Player.order(:name).page(params[:page]).per(50)
+    @players = Player.order(params[:sort]).page(params[:page]).per(50)
   end
 
   def search
