@@ -11,82 +11,82 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="field mb-3">
+    <% form.label :name %>
+    <%= form.text_field :name, class:"form-control", placeholder:"Full name" %>
   </div>
 
-  <div class="field">
-    <%= form.label :position %>
-    <%= form.text_field :position %>
+  <div class="field mb-3">
+    <% form.label :position %>
+    <%= form.text_field :position, class:"form-control", placeholder:"Position" %>
   </div>
 
-  <div class="field">
-    <%= form.label :games_played %>
-    <%= form.number_field :games_played %>
+  <div class="field mb-3">
+    <% form.label :games_played %>
+    <%= form.number_field :games_played, class:"form-control", placeholder:"Number of played games" %>
   </div>
 
-  <div class="field">
-    <%= form.label :goals %>
-    <%= form.number_field :goals %>
+  <div class="field mb-3">
+    <% form.label :goals %>
+    <%= form.number_field :goals, class:"form-control", placeholder:"Number of goals" %>
   </div>
 
-  <div class="field">
-    <%= form.label :assists %>
-    <%= form.number_field :assists %>
+  <div class="field mb-3">
+    <% form.label :assists %>
+    <%= form.number_field :assists, class:"form-control", placeholder:"Number of assists" %>
   </div>
 
-  <div class="field">
-    <%= form.label :points %>
-    <%= form.number_field :points %>
+  <div class="field mb-3">
+    <% form.label :points %>
+    <%= form.number_field :points, class:"form-control", placeholder:"Number of points" %>
   </div>
 
-  <div class="field">
-    <%= form.label :plus_minus %>
-    <%= form.number_field :plus_minus %>
+  <div class="field mb-3">
+    <% form.label :plus_minus %>
+    <%= form.number_field :plus_minus, class:"form-control", placeholder:"Plus-minus" %>
   </div>
 
-  <div class="field">
-    <%= form.label :draft_team %>
-    <%= form.text_field :draft_team %>
+  <div class="field mb-3">
+    <% form.label :draft_team %>
+    <%= form.text_field :draft_team , class:"form-control", placeholder:"Team that drafted the player" %>
   </div>
 
-  <div class="field">
-    <%= form.label :nationality %>
-    <%= form.text_field :nationality %>
+  <div class="field mb-3">
+    <% form.label :nationality %>
+    <%= form.text_field :nationality , class:"form-control", placeholder:"Nationality"%>
   </div>
 
-  <div class="field">
-    <%= form.label :draft_year %>
-    <%= form.number_field :draft_year %>
+  <div class="field mb-3">
+    <% form.label :draft_year %>
+    <%= form.number_field :draft_year , class:"form-control", placeholder:"Draft year"%>
   </div>
 
-  <div class="field">
-    <%= form.label :draft_pick %>
-    <%= form.number_field :draft_pick %>
+  <div class="field mb-3">
+    <% form.label :draft_pick %>
+    <%= form.number_field :draft_pick, class:"form-control", placeholder:"Draft pick number" %>
   </div>
 
-  <div class="field">
-    <%= form.label :retirement_year %>
-    <%= form.number_field :retirement_year %>
+  <div class="field mb-3">
+    <% form.label :retirement_year %>
+    <%= form.number_field :retirement_year, class:"form-control", placeholder:"Retirement year" %>
   </div>
 
-  <div class="field">
-    <%= form.label :penalty_minutes %>
-    <%= form.number_field :penalty_minutes %>
+  <div class="field mb-3">
+    <% form.label :penalty_minutes %>
+    <%= form.number_field :penalty_minutes, class:"form-control", placeholder:"Penalty minutes" %>
   </div>
 
-  <div class="field">
-    <%= form.label :point_share %>
-    <%= form.number_field :point_share %>
+  <div class="field mb-3">
+    <% form.label :point_share %>
+    <%= form.number_field :point_share, class:"form-control", placeholder:"Point share rating" %>
   </div>
 
-  <div class="field">
-    <%= form.label :amateur_team %>
-    <%= form.text_field :amateur_team %>
+  <div class="field mb-3">
+    <% form.label :amateur_team %>
+    <%= form.text_field :amateur_team, class:"form-control", placeholder:"Amateur team" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions ">
+    <%= form.submit class:"btn btn-outline-success" %>
   </div>
 <% end %>

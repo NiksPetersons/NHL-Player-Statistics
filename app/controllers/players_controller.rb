@@ -8,7 +8,12 @@ class PlayersController < ApplicationController
   # GET /players or /players.json
   def index
     #@players = Player.all
-    @players = Player.order(:name).page(params[:page]).per(50)
+    @players = Player.order(params[:sort]).page(params[:page]).per(50)
+  end
+
+  def search
+      @players = Player.where("lower(name) LIKE :q OR lower(position) LIKE :q OR lower(draft_team) LIKE :q OR lower(nationality) LIKE :q",
+       q: "%#{params[:q].downcase}%").order(:name).page(params[:page]).per(50)
   end
 
   # GET /players/1 or /players/1.json

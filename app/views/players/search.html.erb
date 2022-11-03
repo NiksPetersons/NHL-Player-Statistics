@@ -2,12 +2,7 @@
   Data is taken at the moment of 2022 NHL Entry Draft: 08/07/22
 </div>
 
-<h1 class="text-center">NHL Player Statistics</h1>
-
-<h4 class="text-center">
-Total number of players: 
-<%= Player.count %>
-</h4>
+<h1 class="text-center">Search Results</h1>
 
 <div class="d-flex justify-content-center">
   <%= paginate @players %>
@@ -16,18 +11,20 @@ Total number of players:
 <table class="table table-striped table-hover table-bordered table-sm">
   <thead class="thead-dark">
     <tr>
-      <th><%= link_to "Name", :sort => "name"%></th>
+      <th>Name</th>
       <th>Position</th>
       <th>Games</th>
       <th>Goals</th>
       <th>Assists</th>
       <th>Points</th>
       <th>+/-</th>
-      <th><%= link_to"Draft team", :sort => "draft_team"%></th>
-      <th><%= link_to"Nationality", :sort => "nationality"%></th>
+      <th>Draft team</th>
+      <th>Nationality</th>
       <th>Draft year</th>
       <th>Draft pick</th>
+      
       <th>Penalty minutes</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -45,9 +42,12 @@ Total number of players:
         <td><%= player.draft_team %></td>
         <td><%= player.nationality %></td>
         <td><%= player.draft_year %></td>
-        <td><%= player.draft_pick %></td>        
-        <td><%= player.penalty_minutes %></td>        
+        <td><%= player.draft_pick %></td>
+        
+        <td><%= player.penalty_minutes %></td>
+        
         <td><%= link_to 'Details', player, class:"btn btn-outline-primary btn-sm"%></td>
+        
         <% if user_signed_in? %>
           <td><%= link_to 'Edit', edit_player_path(player), class:"btn btn-outline-secondary btn-sm" %></td>
           <td><%= link_to 'Delete', player, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger btn-sm" %></td>
