@@ -4,6 +4,11 @@
 
 <h1 class="text-center">Search Results</h1>
 
+<h4 class="text-center">
+Total search results: 
+<%= @players.total_count %>
+</h4>
+
 <div class="d-flex justify-content-center">
   <%= paginate @players %>
 </div>

@@ -1,13 +1,8 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: %i[ show edit update destroy ]
-
-  def test
-    x= Player.new
-    puts x
-  end
   # GET /players or /players.json
   def index
-    #@players = Player.all
+    
     @players = Player.order(params[:sort]).page(params[:page]).per(50)
   end
 

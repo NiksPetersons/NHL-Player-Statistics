@@ -1,0 +1,14 @@
+<h1 class="d-flex justify-content-center">Graphs</h1>
+<br/>
+<h4 class="d-flex justify-content-center">Number of players drafted by each team</h4>
+<br/>
+<%= bar_chart Player.group(:draft_team).order(:draft_team).count,  height: "850px", colors: ["#005075", "#ffa600"],
+ label: "Players",xtitle: "Number of players", ytitle: "Team" %>
+<br/><br/><br/>
+<h4 class="d-flex justify-content-center">Number of players drafted by year</h4>
+<br/>
+<%= column_chart Player.group(:draft_year).count, colors: ["#005075", "#ffa600"], height: "400px", label: "Players" %>
+<br/><br/><br/>
+<h4 class="d-flex justify-content-center">Player breakdown by position</h4>
+<br/>
+<%= pie_chart Player.group(:position).count, height: "500px" %>
